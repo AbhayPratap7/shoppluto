@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offer with Stars</title>
+  <style>
+    body {
+      background: black;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Star Layers for Background Animation */
+    .stars, .stars2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      z-index: -1;
+    }
+
+    .stars {
+      animation: moveStars 50s linear infinite;
+      opacity: 0.8;
+    }
+
+    .stars2 {
+      animation: moveStars 100s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes moveStars {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-50%, -50%); }
+    }
+
+    .offer-text {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .social-button {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 250px;
+      text-decoration: none;
+    }
+
+    .social-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .instagram {
+      background: #f1a8f6;
+    }
+
+    .whatsapp {
+      background: #a7f5a7;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .button-text {
+      color: black;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated Star Background -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+
+  <div class="offer-text">GET 100/- OFF ON YOUR NEXT PURCHASE!</div>
+
+  <a href="https://www.instagram.com/pluto.fitss?igsh=bGl0cDUzYnAwNmhl&utm_source=qr" target="_blank" style="text-decoration: none;">
+    <div class="social-button instagram">
+      <img src="Users/mac/Desktop/shop /assets/insta.png" alt="Instagram" class="icon" />
+      <span class="button-text">FOLLOW ON INSTAGRAM</span>
+    </div>
+  </a>
+
+  <a href="https://chat.whatsapp.com/LUVNCQmHZxc0myiCcd49o2" target="_blank" style="text-decoration: none;">
+    <div class="social-button whatsapp">
+      <img src="Users/mac/Desktop/shop /wsapp.png" alt="WhatsApp" class="icon" />
+      <span class="button-text">JOIN OUR WHATSAPP COMMUNITY</span>
+    </div>
+  </a>
+
+</body>
+</html>
